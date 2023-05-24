@@ -1,0 +1,17 @@
+{
+    uploadPath: 'uploads/',
+    imgFileName: 'commander_cody.jpeg',
+    imgType: 'image/jpeg',
+    imgName: '212th Attack Battalion',
+    description: 'Personal force to kenobi',
+    attributes: [
+        {trait_type: 'Location', value: 'Geonosis'},
+        {trait_type: 'Kwh', value: '12'},
+        {trait_type: 'Price', value: '2224'}
+    ],
+    sellerFeeBasisPoints: 500,//500 bp = 5%
+    symbol: 'QNPIX',
+    creators: [
+        {address: WALLET.publicKey, share: 100}
+    ]
+}
