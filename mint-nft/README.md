@@ -8,6 +8,6 @@ yarn install
 yarn test
 ```
 
-change secrets
+create a new secret file and add in the following
 - 'destSecret.json'
 - 'ownerSecret.json'
