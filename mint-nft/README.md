@@ -61,7 +61,7 @@ Create the following files and paste the Token Program's Private Key into _owner
 
 ## Set Up - Front End Web Application
 1. Install dependencies
-- Select **Yes** for _use 'src/' directory with this project?_ when prompted.
+- Select **Yes** for _Use 'src/' directory with this project?_ when prompted and **No** for the rest of the prompts.
 ```
 cd ~/metacamp/RET
 npx create-next-app webapp --ts
@@ -73,13 +73,38 @@ npm i @solana/web3.js @solana/wallet-adapter-base @solana/wallet-adapter-react @
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
-3. Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
+3. Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **src/components/Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
 - Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
 
 4. Start the Web Application
 ```
 cd ~/metacamp/RET/webapp
 npm run dev
+```
+
+## Automated Installation and Setup Process
+- Enable executable rights for the scripts
+```
+cd ~/metacamp/RET/setup
+chmod +x setupRET.sh setupWebApp.sh createWallet.sh run.sh stop.sh
+cd ..
+```
+- Automated Setup
+```
+.\setupRET.sh 
+.\setupWebApp.sh 
+```
+- Create New Wallet
+```
+.\createWallet.sh
+```
+- Run Middleware and Frontend Web Application
+```
+.\run.sh
+```
+- Stop Middleware and Frontend Web Application Processes
+```
+.\stop.sh
 ```
 
 ## Notes
