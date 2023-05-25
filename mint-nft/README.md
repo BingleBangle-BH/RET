@@ -8,12 +8,17 @@ cd metacamp
 git clone https://github.com/BingleBangle-BH/RET
 cd RET/mint-nft
 yarn install
+yarn add ts-node
+npm install ts-node --save-dev
 ```
 
 ### Troubleshooting Typescript
 ```
 yarn add ts-node
 npm install ts-node --save-dev
+ts-node
+```
+```
 yarn test
 yarn getTokenAccounts
 ```
