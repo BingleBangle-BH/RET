@@ -170,3 +170,5 @@ node_modules
 test-ledger
 secrets/*.json
 
+#uploads
+/uploads/*.Identifier
