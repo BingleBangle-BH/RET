@@ -2,11 +2,13 @@ from flask import Flask, request
 import datetime
 import subprocess
 import json
+from flask_cors import CORS
 
 x = datetime.datetime.now()
- 
+
 # Initializing flask app
 app = Flask(__name__)
+CORS(app)
  
 # E.g "http://localhost:5000/mint?location=woodlands&price=10&kwh=32"
 # Route to mint
@@ -51,6 +53,8 @@ def sendToken():
     # Returning an api for showing in reactjs
     wallet_address = request.args.get('walletaddress')
     mint_address = request.args.get('mintaddress')
+    print(f"wallet_address: {wallet_address}")
+    print(f"mint_address: {mint_address}")
 
     data = {
         "mint_address": mint_address,
@@ -73,9 +77,9 @@ def sendToken():
             # Command encountered an error
             error = result.stderr
             print(f"Command failed with error: {error}")
-            return 'not ok at command sending token'
+            return "not ok at command sending token\n"
     except:
-        return '400 not ok'
+        return '400 not ok\n'
 
 #E.g http://localhost:5000/sendSol?price=3
 @app.route('/sendSol')
