@@ -36,7 +36,12 @@ def mint():
         if result.returncode == 0:
             # Command executed successfully
             output = result.stdout
-            print(output)
+            # print(output)
+            
+            with open('../logs/mint.logs', 'a+') as file:
+                # Write data to the file
+                file.write(f'{output}+\n')
+            
             return '200 ok'
         else:
             # Command encountered an error

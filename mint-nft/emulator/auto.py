@@ -2,12 +2,12 @@ import time
 import random
 import requests
 class solarPanel:
-    def init(self):
+    def __init__(self):
         self.remainingKwh=str(random.randint(1,4)+random.randint(1,100)/100)
         self.postalCode=str(random.randint(100000,999999))
         self.dollarsPerKwh=str(27+random.randint(10,300)/100)
 
-    def str(self):
+    def __str__(self):
         return "Remaining Kwh: "+str(self.remainingKwh)+" Postal Code: "+str(self.postalCode)+" Dollar Price: "+str(self.dollarsPerKwh)
 
 def mintSolarPanel ():
