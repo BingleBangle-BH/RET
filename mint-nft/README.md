@@ -50,7 +50,7 @@ python3 middleware.py
 ```
 
 ## Set Up - Secrets
-Create the following files and paste the Token Program's Private Key into 'ownerSecret.json' and the testing wallet's Private Key into 'destSecret.json'
+Create the following files and paste the Token Program's Private Key into _ownerSecret.json_ and the testing wallet's Private Key into _destSecret.json_. Refer to the _README.md_ in the _secrets_ folder for more information.
 - 'destSecret.json'
 - 'ownerSecret.json'
 
