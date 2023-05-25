@@ -9,6 +9,8 @@
     "@solana/web3.js": "^1.76.0"
   },
   "scripts": {
-    "test": "ts-node ./app/app.ts"
+    "test": "ts-node ./app/app.ts",
+    "mint": "ts-node ./app/mint.ts",
+    "getTokenAccounts": "ts-node ./app/getTokenAccounts.ts"
   }
 }

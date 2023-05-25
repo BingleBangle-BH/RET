@@ -19,7 +19,7 @@ export async function getTokenAccounts():Promise<string[]> {
         TOKEN_PROGRAM_ID, //new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
         {filters: filters}
     );
-    console.log(`Found ${accounts.length} token account(s)`);
+    // console.log(`Found ${accounts.length} token account(s)`);
     const list: string[] = [];
     accounts.forEach((account, i) => {
         //Parse the account data
@@ -27,13 +27,15 @@ export async function getTokenAccounts():Promise<string[]> {
         const mintAddress:string = parsedAccountInfo["parsed"]["info"]["mint"];
         const tokenBalance: number = parsedAccountInfo["parsed"]["info"]["tokenAmount"]["uiAmount"];
         //Log results
-        console.log(`Token Account No. ${i + 1}: ${account.pubkey.toString()}`);
-        console.log(`--Token Mint: ${mintAddress}`);
-        console.log(`--Token Balance: ${tokenBalance}`);
+        // console.log(`Token Account No. ${i + 1}: ${account.pubkey.toString()}`);
+        // console.log(`--Token Mint: ${mintAddress}`);
+        // console.log(`--Token Balance: ${tokenBalance}`);
         if (tokenBalance == 1){
             list.push(mintAddress);
         }
     });
-    console.log(`Return list: ${list}`);
+    console.log(`${list}`);
     return list;
 }
+
+getTokenAccounts();

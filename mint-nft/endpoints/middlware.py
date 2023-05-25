@@ -108,6 +108,33 @@ def sendSol():
     except:
         return '400 not ok'
      
+#E.g http://localhost:5000/getAccounts
+@app.route('/getAccounts')
+def getAccounts():
+ 
+
+
+    try:
+        result = subprocess.run(['ts-node', '../app/getTokenAccounts.ts'], capture_output=True, text=True)
+
+        with open('../parameters/accounts.json', 'w') as file:
+            # Write data to the file
+            json.dump(result.stdout, file)
+
+
+        # Check the command's output
+        if result.returncode == 0:
+            # Command executed successfully
+            output = result.stdout
+            return output
+        else:
+            # Command encountered an error
+            error = result.stderr
+            print(f"Command failed with error: {error}")
+            return 'not ok at command getting accounts'
+    except:
+        return '400 not ok'
+
 # Running app
 if __name__ == '__main__':
     app.run(debug=True)
