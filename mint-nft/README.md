@@ -44,7 +44,7 @@ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 3. Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
 - Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
 
-4. 
+4. Start the Web Application
 ```
 cd ~/metacamp/RET/webapp
 npm run dev
