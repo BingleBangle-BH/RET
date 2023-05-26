@@ -30,9 +30,6 @@ Here's an example of how your secret file should look like
 
 ![Example of secret file branch](/images/RET%20-%20file-branch-for-secret.png)
 
-## :pushpin: Set Up - Smart Contract
-If you have trouble with setting up the typescripts you can refer to [Troubleshoot](###-Troubleshooting-Typescript)
-
 ## :pushpin: Set Up - Backend Instructions
 If you have trouble with setting up the typescripts you can refer to [Troubleshoot](#troubleshooting-typescript)
 ```
@@ -151,4 +148,4 @@ v1.22.19
 - The Front End Web Application runs on port 3000, acceessible via [http://localhost:3000/](http://localhost:3000/)
 
 ## :hammer_and_wrench: Tech Stack
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/><img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"><img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/><img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"><img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white">
