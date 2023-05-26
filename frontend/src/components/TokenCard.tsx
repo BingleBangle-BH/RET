@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useState } from "react";
 
@@ -29,7 +29,10 @@ const TokenCard = ({ mintAddress }: { mintAddress: string }) => {
       alignItems="stretch"
       width="100%"
     >
-      <Text>Renewable Energy | Solar</Text>
+      <HStack>
+        <Text fontSize={20}>Renewable Energy | </Text>
+        <Text fontSize={20} color="#ffff82">solar &#x1F506;</Text>
+      </HStack>
       <Text fontSize="sm" color="gray.400">{mintAddress}</Text>
       <Flex justifyContent="space-between" width="100%">
         <Button colorScheme="teal" onClick={buyNft}>

@@ -92,8 +92,11 @@ npm i @solana/web3.js @solana/wallet-adapter-base @solana/wallet-adapter-react @
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
-3. Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **src/components/Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
-- Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
+3. 
+- Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **src/components/Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
+- Create a `images` folder under `public` folder inside the _webapp_ directory and add **public/images/RET - animate (large).gif** from the  _frontend_ directory into the newly created folder.
+
+    - Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
 
 4. Start the Web Application
 ```
