@@ -15,6 +15,9 @@ The aim of the project is to leverage the power of Non-Fungible Tokens (NFTs) to
 ## Video demo
 
 
+## Slides
+
+https://docs.google.com/presentation/d/1FeaY0W1N5DRBbcQR0JUa_vOHqVAtOZNt/edit?usp=sharing&ouid=117867426561413466927&rtpof=true&sd=true
 
 ## Set Up - Smart Contract
 ```
