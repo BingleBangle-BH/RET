@@ -32,6 +32,9 @@ Here's an example of how your secret file should look like
 
 ## :pushpin: Set Up - Smart Contract
 If you have trouble with setting up the typescripts you can refer to [Troubleshoot](###-Troubleshooting-Typescript)
+
+## :pushpin: Set Up - Backend Instructions
+If you have trouble with setting up the typescripts you can refer to [Troubleshoot](#troubleshooting-typescript)
 ```
 git clone https://github.com/BingleBangle-BH/RET
 cd RET/mint-nft
@@ -74,6 +77,7 @@ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 
 It should ultimately look like this:
+
 [Move image](/images/RET%20-%20move-image.png)
 
 [Move file](/images/RET%20-%20move-files.png)
