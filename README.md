@@ -31,7 +31,7 @@ Here's an example of how your secret file should look like
 ![Example of secret file branch](/images/RET%20-%20file-branch-for-secret.png)
 
 ## Set Up - Backend Instructions
-If you have trouble with setting up the typescripts you can refer to [Troubleshoot](###-Troubleshooting-Typescript)
+If you have trouble with setting up the typescripts you can refer to [Troubleshoot](#troubleshooting-typescript)
 ```
 git clone https://github.com/BingleBangle-BH/RET
 cd RET/mint-nft
