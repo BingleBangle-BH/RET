@@ -75,6 +75,7 @@ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 
 It should ultimately look like this:
+
 [Move image](/images/RET%20-%20move-image.png)
 
 [Move file](/images/RET%20-%20move-files.png)
