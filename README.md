@@ -10,14 +10,14 @@ Limited Access to Renewable Energy in certain areas. Companies and orgnisation w
 The aim of the project is to leverage the power of Non-Fungible Tokens (NFTs) to promote and support the adoption of renewable energy sources by both consumers and organizations alike.
 
 ## How it works?
-
+![RET pipeline](/images/RET%20-%20pipeline.png)
 
 ## Video demo
 
 
 ## Slides
 
-https://docs.google.com/presentation/d/1FeaY0W1N5DRBbcQR0JUa_vOHqVAtOZNt/edit?usp=sharing&ouid=117867426561413466927&rtpof=true&sd=true
+[pitch deck](https://docs.google.com/presentation/d/1FeaY0W1N5DRBbcQR0JUa_vOHqVAtOZNt/edit?usp=sharing&ouid=117867426561413466927&rtpof=true&sd=true)
 
 ## Set Up - Smart Contract
 ```
