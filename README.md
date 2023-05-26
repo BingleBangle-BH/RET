@@ -21,16 +21,93 @@ The aim of the project is to leverage the power of Non-Fungible Tokens (NFTs) to
 
 [pitch deck](https://docs.google.com/presentation/d/1FeaY0W1N5DRBbcQR0JUa_vOHqVAtOZNt/edit?usp=sharing&ouid=117867426561413466927&rtpof=true&sd=true)
 
+## Set Up - Secrets
+Create the following files and paste the Token Program's Private Key into _ownerSecret.json_ and the testing wallet's Private Key into _destSecret.json_. Refer to the _README.md_ in the _secrets_ folder for more information.
+- 'destSecret.json'
+- 'ownerSecret.json'
+
+Here's an example of how your secret file should look like
+
+![Example of secret file branch](/images/RET%20-%20file-branch-for-secret.png)
+
 ## Set Up - Smart Contract
+If you have trouble with setting up the typescripts you can refer to [Troubleshoot](###-Troubleshooting-Typescript)
 ```
-cd ~
-mkdir metacamp
-cd metacamp
 git clone https://github.com/BingleBangle-BH/RET
 cd RET/mint-nft
 yarn install
 yarn add ts-node
 npm install ts-node --save-dev
+```
+
+## Set Up - API / Middleware (GET)
+```
+sudo apt install python3
+pip3 install -r requirements.txt
+cd endpoints
+python3 middleware.py
+```
+
+
+## Set Up - Front End Web Application
+1. Install dependencies
+- Select **Yes** for _Use 'src/' directory with this project?_ when prompted and **No** for the rest of the prompts.
+```
+npx create-next-app webapp --ts
+```
+
+It should look like this
+
+![Example of npx install webapp](/images/RET%20-%20install-frontend.png)
+
+2. Install Solana Wallet Adaptor & Chakra UI
+```
+cd webapp
+npm i @solana/web3.js @solana/wallet-adapter-base @solana/wallet-adapter-react @solana/wallet-adapter-wallets
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+
+3. 
+- Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **src/components/Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
+- Create a `images` folder under `public` folder inside the _webapp_ directory and add **public/images/RET - animate (large).gif** from the  _frontend_ directory into the newly created folder.
+
+    - Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
+
+
+It should ultimately look like this:
+[Move image](/images/RET%20-%20move-image.png)
+
+[Move file](/images/RET%20-%20move-files.png)
+
+4. Start the Web Application
+```
+cd webapp
+npm run dev
+```
+
+## Automated Installation and Setup Process
+- Enable executable rights for the scripts
+```
+cd /RET/setup
+chmod +x setupRET.sh setupWebApp.sh createWallet.sh run.sh stop.sh
+cd ..
+```
+- Automated Setup
+```
+.\setupRET.sh 
+.\setupWebApp.sh 
+```
+- Create New Wallet
+```
+.\createWallet.sh
+```
+- Run Middleware and Frontend Web Application
+```
+.\run.sh
+```
+- Stop Middleware and Frontend Web Application Processes
+```
+.\stop.sh
 ```
 
 ### Troubleshooting Typescript
@@ -64,71 +141,6 @@ v12.22.9
 
 yarn --version
 v1.22.19
-```
-
-## Set Up - API / Middleware (GET)
-```
-sudo apt install python3
-pip3 install -r requirements.txt
-cd endpoints
-pip3 install flask-cors
-python3 middleware.py
-```
-
-## Set Up - Secrets
-Create the following files and paste the Token Program's Private Key into _ownerSecret.json_ and the testing wallet's Private Key into _destSecret.json_. Refer to the _README.md_ in the _secrets_ folder for more information.
-- 'destSecret.json'
-- 'ownerSecret.json'
-
-## Set Up - Front End Web Application
-1. Install dependencies
-- Select **Yes** for _Use 'src/' directory with this project?_ when prompted and **No** for the rest of the prompts.
-```
-cd ~/metacamp/RET
-npx create-next-app webapp --ts
-```
-2. Install Solana Wallet Adaptor & Chakra UI
-```
-cd webapp
-npm i @solana/web3.js @solana/wallet-adapter-base @solana/wallet-adapter-react @solana/wallet-adapter-wallets
-npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
-```
-
-3. 
-- Replace **src/pages/index.tsx, src/pages/_app.tsx, src/components/TokenCard.tsx** and **src/components/Wallets.tsx** inside the _webapp_ directory with the files located inside the _frontend_ directory
-- Create a `images` folder under `public` folder inside the _webapp_ directory and add **public/images/RET - animate (large).gif** from the  _frontend_ directory into the newly created folder.
-
-    - Tutorial for creating the front end web application can be found [here](https://blog.anishde.dev/creating-a-custom-solana-connect-wallet-ui-with-react-and-chakra-ui)
-
-4. Start the Web Application
-```
-cd ~/metacamp/RET/webapp
-npm run dev
-```
-
-## Automated Installation and Setup Process
-- Enable executable rights for the scripts
-```
-cd ~/metacamp/RET/setup
-chmod +x setupRET.sh setupWebApp.sh createWallet.sh run.sh stop.sh
-cd ..
-```
-- Automated Setup
-```
-.\setupRET.sh 
-.\setupWebApp.sh 
-```
-- Create New Wallet
-```
-.\createWallet.sh
-```
-- Run Middleware and Frontend Web Application
-```
-.\run.sh
-```
-- Stop Middleware and Frontend Web Application Processes
-```
-.\stop.sh
 ```
 
 ## Notes
